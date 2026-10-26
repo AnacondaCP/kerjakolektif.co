@@ -1,0 +1,12 @@
+{
+  "outputDirectory": "public",
+  "functions": {
+    "api/bundle.js": {
+      "includeFiles": "public/js/**/*.js"
+    }
+  },
+  "rewrites": [
+    { "source": "/js/app.js", "destination": "/api/bundle" },
+    { "source": "/api/:path*", "destination": "/api/index?path=:path*" }
+  ]
+}

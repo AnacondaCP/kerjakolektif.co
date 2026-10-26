@@ -1,0 +1,16 @@
+{
+  "name": "kerjakolektif",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "migrate:vercel": "node --env-file=.env.local scripts/migrate-sqlite-to-neon.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "@vercel/blob": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
